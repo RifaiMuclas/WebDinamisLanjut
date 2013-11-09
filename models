@@ -29,7 +29,8 @@ class Products_model extends CI_Model {
                 $query = $this->db->get ('products');
                 return $query->result();
         }
- 
+        
+    // menambahkan data masukan
     function insert_entry()
     {
         $this->ProductName = $this->input->post('ProductName',true);
@@ -37,6 +38,7 @@ class Products_model extends CI_Model {
         return $this->db->insert('products', $this);
     }
 
+    // mengupdate data masukan
     function update_entry()
     {
         $this->ProductName = $this->input->post('ProductName',true);
@@ -44,12 +46,14 @@ class Products_model extends CI_Model {
         return $this->db->update('products', $this, array('ProductID' => $this->input->post('id',true)));
     }
 
+    // menghapus data
     function hapus($id)
     {
         $this->db->where('ProductID',$id);
         return $this->db->delete('products');
     }
-
+    
+    // mengecek keterangan product
     function cek_dependensi($id)
     {
         $this->db->where('ProductID',$id);
