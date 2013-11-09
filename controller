@@ -30,6 +30,8 @@ class Products extends CI_Controller {
                 $this->mytemplate->loadBackend('products',$data);
         }
                 
+                
+        // proses untuk mengeksekusi, untuk menginput dan mengupdate dan menghapus
         public function process($mode,$id='')
         {
                 
