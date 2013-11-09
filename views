@@ -12,12 +12,14 @@
                         {
                                 echo"<option value=$a[CategoryID]>$a[CategoryName]</option>";
                         }
+                        
                         ?>
                         </select>
                         <input type=text name="ProductName">
                         <input type=submit value="cari">
                         </form>
                         
+                        // menampilkan baris data sewa product
                         <a href="<?php print site_url();?>backend/products"> <b>Tampil Semua Products</b></a>
                         <br/>
                         <br/>
@@ -25,8 +27,10 @@
                         <?php
                          echo anchor(site_url('backend/products/form/insert/'),'Add',' class="input-submit"');        
                         ?>
+                        
                         <br />
                         
+                        // menampilkan data tabel per item dan unitnya
                         <table>
                                 <tr>
                                         <th>No</th>
